@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Madlib</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Madlibs Program</h1>
+	<form name="madlibsForm" onsubmit="generateMadlibs(); return false;">
+	    <label for="name">Name:</label>
+	    <input type="text" id="name" name="name" required><br><br>
+	    <label for="adj1">Adjective:</label>
+	    <input type="text" id="adj1" name="adj1" required><br><br>
+	    <label for="noun1">Noun:</label>
+	    <input type="text" id="noun1" name="noun1" required><br><br>
+	    <label for="verb1">Verb:</label>
+	    <input type="text" id="verb1" name="verb1" required><br><br>
+	    <label for="adj2">Adjective:</label>
+	    <input type="text" id="adj2" name="adj2" required><br><br>
+	    <label for="noun2">Noun:</label>
+	    <input type="text" id="noun2" name="noun2" required><br><br>
+	    <button type="submit">Generate Madlibs</button>
+	</form>
+
+	<script>
+    	function generateMadlibs() {
+    	    var name = document.getElementById("name").value;
+    	    var adj1 = document.getElementById("adj1").value;
+    	    var noun1 = document.getElementById("noun1").value;
+    	    var verb1 = document.getElementById("verb1").value;
+    	    var adj2 = document.getElementById("adj2").value;
+    	    var noun2 = document.getElementById("noun2").value;
+
+    	    var result = "<b>" + name + "</b> woke up feeling <b>" + adj1 + "</b>. When <b>" + name + "</b> walked to the <b>" + noun1 + "</b>, <b>" + name + "</b> realized that <b>" + noun1 + "</b> did not exist. <b>" + name + "</b> decided to <b>" + verb1 + "</b> to find the missing <b>" + noun1 + "</b>. <b>" + name + "</b> walked for hours until <b>" + name + "</b> found a <b>" + adj2 + "</b> <b>" + noun2 + "</b>. Finally, <b>" + name + "</b> found the missing <b>" + noun1 + "</b> inside the <b>" + noun2 + "</b>.";
+
+    	    document.getElementById("madlibsResult").innerHTML = result;
+    	}
+    </script>
+
+    <div id="madlibsResult"></div>
+</body>
+</html>
